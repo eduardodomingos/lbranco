@@ -9,8 +9,14 @@
     color: $white;
     transition: background-color .2s;
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 14px;
     text-transform: capitalize;
+    @include mq($from: tablet) {
+        font-size: 16px;
+    }
+    @include mq($from: desktop) {
+        font-size: 18px;
+    }
     @include attention() {
         background-color: darken($red, 10%);
     }

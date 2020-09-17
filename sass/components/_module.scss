@@ -1,0 +1,28 @@
+/*--------------------------------------------------------------
+# Module
+--------------------------------------------------------------*/
+
+.module {
+    padding: 35px 0;
+    &:first-child {
+        padding: 0px;
+    }
+    .module-pre-title {
+        color: $red;
+        text-align: center;
+        font-size: 14px;
+        @include mq($from: desktop) {
+            font-size: 16px;
+        }
+    }
+    .module-title {
+        color: $blue;
+        text-align: center;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .module-inner-pre-title {}
+    .module-inner-title {}
+}

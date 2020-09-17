@@ -1,0 +1,50 @@
+/*--------------------------------------------------------------
+# Headlines
+--------------------------------------------------------------*/
+
+.headlines-module {
+    .headlines-list {
+        > li {
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+            @include mq($from: desktop) {
+                article {
+                    display: flex;
+                    align-items: center;
+                }
+                .photo {
+                    width: 50%;
+                }
+                .text {
+                    width: 50%;
+                    padding-left: 60px;
+                }
+                &:nth-child(odd) {
+                    .text {
+                        order: 0;
+                        padding-left: 0;
+                        padding-right: 60px;
+                    }
+                    .photo {
+                        order: 1;
+                    }
+                }
+            }
+        }
+        .photo {
+            margin-bottom: 16px;
+        }
+        .text {
+            h1 {
+                color: $blue;
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
+            p {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

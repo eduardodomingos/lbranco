@@ -1,0 +1,112 @@
+/*--------------------------------------------------------------
+# Teaser
+--------------------------------------------------------------*/
+.teaser {
+    .teaser__image {
+        display: block;
+        margin-bottom: $spacing-unit--small;
+    }
+
+    .topic {
+        font-weight: $font--bold;
+        text-transform: uppercase;
+        font-size: 13px;
+        @include attention() {
+            color: $color-link;
+        }
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: $spacing-unit--small;
+    }
+
+    p {
+        font-size: 95%;
+    }
+
+    &--portfolio {
+        .list--portfolio & {
+            position: relative;
+            background-color: lighten($black, 10%);
+            &:not(:last-child) {
+                margin: 0 0 $spacing-unit--large;
+                @include mq($from: tablet) {
+                    margin: 0 $spacing-unit 0 0;
+                }
+            }
+
+            img {
+                margin-bottom: 0;
+                transition: all .2s;
+            }
+
+            h2 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                text-align: center;
+                width: 100%;
+                opacity: 0;
+                color: $white;
+                transition: all .2s;
+                font-size: 18px;
+                letter-spacing: .2px;
+            }
+
+            @include attention() {
+                h2 {
+                    opacity: 1;
+                }
+                img {
+                    opacity: .6;
+                }
+            }
+        }
+
+        .list--teasers & {
+            .teaser__image {
+                position: relative;
+                padding-top: 2/3 * 100%;
+                margin-bottom: $spacing-unit--small + $spacing-unit--tiny;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: bottom;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &--location {
+        position: relative;
+        background-color: lighten($black, 10%);
+        .tesaser__image {
+            margin-bottom: 0;
+            transition: all .2s;
+            opacity: .6;
+        }
+        h2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            width: 100%;
+            color: $white;
+            transition: all .2s;
+            letter-spacing: .2px;
+        }
+        @include attention() {
+            img {
+                opacity: .8;
+            }
+        }
+    }
+}

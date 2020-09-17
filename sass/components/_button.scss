@@ -1,0 +1,17 @@
+/*--------------------------------------------------------------
+# Button
+--------------------------------------------------------------*/
+
+.button {
+    display: inline-block;
+    background-color: $red;
+    font-weight: 700;
+    color: $white;
+    transition: background-color .2s;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-transform: capitalize;
+    @include attention() {
+        background-color: darken($red, 10%);
+    }
+}

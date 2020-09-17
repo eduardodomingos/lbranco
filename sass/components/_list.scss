@@ -1,0 +1,26 @@
+/*--------------------------------------------------------------
+# List
+--------------------------------------------------------------*/
+.list {
+    &--teasers {
+        display: grid;
+        grid-gap: $spacing-unit--large;
+        @include mq($from: tablet) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    &--portfolio {
+        display: block;
+        > li {
+            &:not(:last-child) {
+                margin-bottom: $spacing-unit--large;
+                @include mq($from: tablet) {
+                    margin-bottom: $spacing-unit;
+                }
+            }
+            @include mq($from: tablet) {
+                display: flex;
+            }
+        }
+    }
+}
